@@ -50,3 +50,25 @@ function playRound (computerSelection, playerSelection) {
   }
 }
 //playRound(computerPlay(), getPlayerChoice());
+
+function game() {
+  let score = [0, 0];
+  while (score[0] < 5 && score[1] < 5) {
+    let holder = playRound(computerPlay(), getPlayerChoice());
+    // console.clear();
+    console.log(holder);
+    if (holder[4] == 'w') {
+      score[0]++;
+    } else if (holder[4] == 'l') {
+      score[1]++;
+    }
+    console.log(`The score is Human: ${score[0]}, Computer: ${score[1]}`);
+    // console.log('Play the next round!')
+  }
+  if (score[0] == 5) {
+    console.log('YOU WON!!!!');
+  } else {
+    console.log('Better luck next time!');
+  }
+
+}
