@@ -19,7 +19,7 @@ function getPlayerChoice() { //forces player to choose correct selection, html a
   }
 }
 
-function playRound (computerSelection, playerSelection) {
+function playRound (computerSelection, playerSelection) { //Contains the logic for RPS and creates round messages
   let lose = `You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}!`
   let win = `You win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}!`
   let draw = `You draw! Both players chose ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`
@@ -49,9 +49,8 @@ function playRound (computerSelection, playerSelection) {
     }
   }
 }
-//playRound(computerPlay(), getPlayerChoice());
 
-function game() {
+function game() { //plays a fixed number of rounds and declares the winner
   let score = [0, 0];
   while (score[0] < 5 && score[1] < 5) {
     let holder = playRound(computerPlay(), getPlayerChoice());
