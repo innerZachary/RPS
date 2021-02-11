@@ -22,7 +22,7 @@ function getPlayerChoice() { //forces player to choose correct selection, html a
 function playRound (computerSelection, playerSelection) {
   let lose = `You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}!`
   let win = `You win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}!`
-  let draw = `You draw! Both players chose ${computerSelection}`
+  let draw = `You draw! Both players chose ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`
   if (playerSelection == 'rock') {
     if (computerSelection == 'paper') {
       return lose;
