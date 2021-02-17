@@ -44,12 +44,37 @@ function playRound(computerSelection, playerSelection) { //Contains the logic fo
 const choices = document.querySelectorAll('.choices');
 // choices.forEach(choice => console.log(choice.textContent));
 
+const message = document.querySelector('.message');
+console.log(message.textContent);
+
 const scoreboard = document.querySelector('.scoreboard');
-console.log(scoreboard.textContent);
+//scoreboard.textContent = "The score is Human: 0, Computer 0";
+
+const winMessage = document.createElement('h3');
+winMessage.textContent = "You Won! Click to play again!";
+
+const loseMessage = document.createElement('h3');
+loseMessage.textContent = "You Lose! Click to give it another go!"
 
 choices.forEach((choice) => {
   choice.addEventListener('click', () => {//every time a choice button is clicked a round is played
     //console.log(playRound(computerPlay(), choice.textContent.toLowerCase()));
-    scoreboard.textContent = `${playRound(computerPlay(), choice.textContent.toLowerCase())}`;
+    let result = `${playRound(computerPlay(), choice.textContent.toLowerCase())}`
+    message.textContent = result;
+    if (result[4] == 'w') {
+      score[0]++;
+    } else if (result[4] == 'l') {
+      score[1]++;
+    }
+    scoreboard.textContent = `The score is Human: ${score[0]} Computer: ${score[1]}`
+    if (score[0] > 4) {
+      message.appendChild(winMessage);
+      score = [0, 0];//doesnt work
+    } else if (score[1] > 4) {
+      message.appendChild(loseMessage);
+      score = [0,0];//doesnt work
+    }
   });
 });
+
+const score = [0, 0];
