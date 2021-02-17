@@ -1,4 +1,9 @@
-/* body {
-  background: blue
-} */
+body,html {
+  /* background: blue; */
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: center; */
+}
 

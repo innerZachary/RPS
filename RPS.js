@@ -1,3 +1,4 @@
+//First version played by the console
 function computerPlay() { //return random chance rps
   let choice = Math.random() * 100;
   if (choice < 33) {
