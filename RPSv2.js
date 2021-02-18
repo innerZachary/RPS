@@ -69,12 +69,14 @@ choices.forEach((choice) => {
     scoreboard.textContent = `The score is Human: ${score[0]} Computer: ${score[1]}`
     if (score[0] > 4) {
       message.appendChild(winMessage);
-      score = [0, 0];//doesnt work
+      score[0] = 0;
+      score[1] = 0;
     } else if (score[1] > 4) {
       message.appendChild(loseMessage);
-      score = [0,0];//doesnt work
+      score[0] = 0;
+      score[1] = 0;
     }
   });
 });
 
-const score = [0, 0];
+let score = [0, 0];
