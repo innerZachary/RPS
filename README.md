@@ -12,3 +12,9 @@ I learn enough about the DOM and get some more HTML and CSS under my belt!
 
 If I have more ideas, I will add them here!
 
+2/17/21
+I used event handlers to play the game in the browser window. 
+I would like to come back to this project to clean up the styling and possibly add more functionality.
+
+It would also make sense to figure out how to clean up the code so that the fucntions
+are laid out more clearly.

@@ -1,26 +1,17 @@
 body,html {
-  /* background: blue; */
   margin: 0;
   padding: 0;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-content: center; */
+
 }
 
-/* body {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-} */
+
 
 .flex-wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   margin-top: 20vh;
 }
 
-/* .grid-wrapper {
-  grid-row: 2 3;
-} */
+
 
